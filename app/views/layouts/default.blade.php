@@ -28,7 +28,7 @@
         <div class = "navbar-collapse collapse navHeaderCollapse" >
             <ul class = "nav navbar-nav navbar-right">
 
-                <li class = "active"> {{link_to('/','Start')}}</li>
+                <li class = "active"> {{link_to('viewmail','Start')}}</li>
                 <li> {{link_to_route('mail','Mail')}}</li>
             </ul>
         </div>

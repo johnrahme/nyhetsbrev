@@ -68,4 +68,6 @@ Route::get('contact/sent', array('as' => 'sent', 'uses' => 'ContactController@se
 //Mail
 Route::get('mail', array('as'=>'mail','uses' => 'MailController@index'));
 
+Route::get('viewmail', array('as'=>'viewmail','uses' => 'MailController@view'));
+
 

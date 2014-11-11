@@ -18,14 +18,21 @@ class MailController extends BaseController {
     public function index()
     {
 
-        Mail::send('mail.layouts.sidebar', array('test' => 'test'), function ($message) {
-            $message->from('john_rahme92@hotmail.com', 'John Rahme');
+        Mail::send('mail.layouts.antowrk', array('test' => 'test'), function ($message) {
+            $message->from('it@futf.se', 'John Rahme');
 
-            $message->to('john.rahme.se@gmail.com')->subject('Nyhetsbrev');
+            $message->to(array('styrelse@futf.se', 'john_rahme92@hotmail.com'))->subject('Nyhetsbrev Test');
 
         });
 
-        return View::make('mail.layouts.sidebar')
+        return View::make('mail.layouts.antowrk')
+            ->with('title', 'Mail');
+    }
+    public function view()
+    {
+
+
+        return View::make('mail.layouts.antowrk')
             ->with('title', 'Mail');
     }
 }

@@ -29,11 +29,7 @@
             <ul class = "nav navbar-nav navbar-right">
 
                 <li class = "active"> {{link_to('/','Start')}}</li>
-                <li> {{link_to_route('users','Användare')}}</li>
-                <li> {{link_to_route('events','Events')}}</li>
                 <li> {{link_to_route('mail','Mail')}}</li>
-                <li> <a href = "#">Admin </a></li>
-                <li> <a href = "#contact" data-toggle = "modal">Kontakt</a></li>
             </ul>
         </div>
     </div>

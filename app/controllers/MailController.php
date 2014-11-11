@@ -19,9 +19,9 @@ class MailController extends BaseController {
     {
 
         Mail::send('mail.layouts.sidebar', array('test' => 'test'), function ($message) {
-            $message->from('john.rahme.se@gmail.com', 'john.rahme.se@gmail.com');
+            $message->from('john_rahme92@hotmail.com', 'John Rahme');
 
-            $message->to('john_rahme92@hotmail.com')->subject('Nyhetsbrev');
+            $message->to('john.rahme.se@gmail.com')->subject('Nyhetsbrev');
 
         });
 

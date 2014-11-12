@@ -35,4 +35,28 @@ class MailController extends BaseController {
         return View::make('mail.layouts.antowrk')
             ->with('title', 'Mail');
     }
+    public function viewdyn(){
+        return View::make('mail.layouts.antworkDyn')
+            ->with('header', Input::get('header'))->with('text1', Input::get('text1'));
+
+    }
+    public function create(){
+        return View::make('mail.create')
+            ->with('title', 'Mail');
+    }
+
+    public function senddyn()
+    {
+
+        Mail::send('mail.layouts.antworkDyn', array('test' => 'test'), function ($message) {
+            $message->from('john.rahme.test@gmail.com', 'John Rahme');
+
+            $message->to(array('john.rahme.se@gmail.com'))->subject('Nyhetsbrev Test');
+
+        });
+
+        return Redirect::to('createmail');
+    }
+
+
 }

@@ -9,6 +9,8 @@
     {{ HTML::style('css/bootstrap.css') }}
     {{ HTML::style('css/bootstrap-theme.css') }}
     {{ HTML::style('css/jquery.datetimepicker.css') }}
+    {{ HTML::style('css/bootstrap-wysihtml5.css') }}
+    @yield('styles')
 
 </head>
 
@@ -30,6 +32,7 @@
 
                 <li class = "active"> {{link_to('viewmail','Start')}}</li>
                 <li> {{link_to_route('mail','Mail')}}</li>
+                <li> {{link_to_route('createdynmail','Create')}}</li>
             </ul>
         </div>
     </div>
@@ -54,6 +57,8 @@
 {{ HTML::script('js/bootstrap.min.js') }}
 {{HTML::script('js/jquery.datetimepicker.js')}}
 {{HTML::script('js/checkmodal.js')}}
+{{HTML::script('js/bootstrap-wysihtml5.min.js')}}
+{{HTML::script('js/wysihtml5-0.3.0.js')}}
 
 
     <!-- Script -->

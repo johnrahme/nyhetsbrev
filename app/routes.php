@@ -70,4 +70,11 @@ Route::get('mail', array('as'=>'mail','uses' => 'MailController@index'));
 
 Route::get('viewmail', array('as'=>'viewmail','uses' => 'MailController@view'));
 
+Route::post('viewdynmail', array('as'=>'viewdynmail','uses' => 'MailController@viewdyn'));
+
+Route::post('senddynmail', array('as'=>'senddynmail','uses' => 'MailController@send'));
+
+Route::get('createdynmail', array('as'=>'createdynmail','uses' => 'MailController@create'));
+
+
 

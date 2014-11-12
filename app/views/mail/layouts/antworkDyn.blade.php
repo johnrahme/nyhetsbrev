@@ -139,7 +139,7 @@ img {
     <tr>
       <td align = "center" class="content-wrapper" style="padding-left:24px;padding-right:24px">
         <br>
-        <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:30px;font-weight:600;color:#000000;margin-top:18px">Hej alla glada tekniska fysiker!</div>
+        <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:30px;font-weight:600;color:#000000;margin-top:18px">{{$header}}</div>
       </td>
     </tr>
 
@@ -159,7 +159,7 @@ img {
              <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg"  border="0" alt="Styrelsen hälsar" width="450" height="300" hspace="0" vspace="0" style="max-width:100%; " class="image">
               <div class="subtitle2" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Styrelsen hälsar!</div>
               <br>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Here upon the very point of starting for the voyage, Captain Peleg and Captain Bildad were going it with a high hand on the quarter-deck, just as if they were to be joint-commanders at sea, as well as to all appearances in port.</div>
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$text1}}</div>
               <br>
             </td>
           </tr>

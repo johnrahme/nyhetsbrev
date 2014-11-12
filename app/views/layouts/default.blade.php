@@ -7,6 +7,7 @@
 
     <!-- CSS are placed here -->
     {{ HTML::style('css/bootstrap.css') }}
+    {{ HTML::style('css/bootstrap.css') }}
     {{ HTML::style('css/bootstrap-theme.css') }}
     {{ HTML::style('css/jquery.datetimepicker.css') }}
     {{ HTML::style('css/bootstrap-wysihtml5.css') }}

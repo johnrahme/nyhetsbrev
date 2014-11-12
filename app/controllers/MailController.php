@@ -41,7 +41,7 @@ class MailController extends BaseController {
 
     }
     public function create(){
-        return View::make('mail.create')
+        return View::make('mail.test')
             ->with('title', 'Mail');
     }
 

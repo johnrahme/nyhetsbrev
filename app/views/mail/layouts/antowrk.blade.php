@@ -158,15 +158,6 @@ img {
             </td>
           </tr>
 
-
-          <tr>
-            <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
-              <img src="http://www.futf.se/img/nyhetsbrev/utbildningsutskottet.jpg" border="0" alt="Utbildningsutskottet" width="200" height="200" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Utbildningsutskottet</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Here upon the very point of starting for the voyage, Captain Peleg and Captain Bildad were going it with a high hand on the quarter-deck, just as if they were to be joint-commanders at sea, as well as to all appearances in port.</div>
-              <br>
-            </td>
-          </tr>
         </table>
 
 
@@ -183,10 +174,6 @@ img {
             </td>
           </tr>
         </table>
-
-
-
-
 
     </td>
   </tr>

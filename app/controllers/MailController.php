@@ -19,9 +19,9 @@ class MailController extends BaseController {
     {
 
         Mail::send('mail.layouts.antowrk', array('test' => 'test'), function ($message) {
-            $message->from('it@futf.se', 'John Rahme');
+            $message->from('john.rahme.test@gmail.com', 'John Rahme');
 
-            $message->to(array('styrelse@futf.se', 'john_rahme92@hotmail.com'))->subject('Nyhetsbrev Test');
+            $message->to(array('john.rahme.se@gmail.com'))->subject('Nyhetsbrev Test');
 
         });
 

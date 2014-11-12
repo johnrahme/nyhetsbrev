@@ -5,7 +5,7 @@
 		<script src="wusiwug/js/wysihtml5-0.3.0.js"></script>
 		<script src="wusiwug/js/jquery-1.7.1.min.js"></script>
 		<script src="wusiwug/js/bootstrap.min.js"></script>
-		<script src="js/bootstrap-wysihtml5.js"></script>
+		<script src="wusiwug/js/bootstrap-wysihtml5.js"></script>
 
 	</head>
 	<body>

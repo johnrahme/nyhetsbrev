@@ -36,26 +36,39 @@ class MailController extends BaseController {
             ->with('title', 'Mail');
     }
     public function viewdyn(){
+
         return View::make('mail.layouts.antworkDyn')
-            ->with('header', Input::get('header'))->with('text1', Input::get('text1'));
+            ->with('header', Input::get('header'))
+            ->with('bigColumn', Input::get('bigColumn'))
+            ->with('leftColumn1', Input::get('leftColumn1'))
+            ->with('leftColumn2', Input::get('leftColumn2'))
+            ->with('rightColumn1', Input::get('rightColumn1'))
+            ->with('rightColumn2', Input::get('rightColumn2'));
 
     }
     public function create(){
-        return View::make('mail.test')
+        return View::make('mail.test2')
             ->with('title', 'Mail');
     }
 
     public function senddyn()
     {
+        $data = array('header'=>Input::get('header'),
+            'bigColumn' => Input::get('bigColumn'),
+            'leftColumn1' => Input::get('leftColumn1'),
+            'leftColumn2' => Input::get('leftColumn2'),
+            'rightColumn1' => Input::get('rightColumn1'),
+            'rightColumn2' => Input::get('rightColumn2'));
 
-        Mail::send('mail.layouts.antworkDyn', array('test' => 'test'), function ($message) {
+
+        Mail::send('mail.layouts.antworkDyn', $data, function ($message) {
             $message->from('john.rahme.test@gmail.com', 'John Rahme');
 
             $message->to(array('john.rahme.se@gmail.com'))->subject('Nyhetsbrev Test');
 
         });
 
-        return Redirect::to('createmail');
+        return Redirect::to('createdynmail');
     }
 
 

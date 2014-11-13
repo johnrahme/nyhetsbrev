@@ -147,49 +147,53 @@ img {
   <tr>
     <td class="cols-wrapper" style="padding-left:12px;padding-right:12px">
 
-
+        {{--Start Big Column--}}
         <!--[if mso]>
           <table border="0" width="576" cellpadding="0" cellspacing="0" style="width: 576px;">
-          <tr><td width="288" style="width: 576px;" valign="top"><![endif]-->
+          <tr><td width="576" style="width: 576px;" valign="top"><![endif]-->
 
 
         <table width="576" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 576px;">
           <tr>
             <td class="col" valign="top" align = "center" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
              <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg"  border="0" alt="Styrelsen hälsar" width="450" height="300" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle2" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Styrelsen hälsar!</div>
+              {{--<div class="subtitle2" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Styrelsen hälsar!</div>
+              <br>--}}
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$bigColumn}}</div>
               <br>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$text1}}</div>
-              <br>
+
             </td>
           </tr>
         </table>
 
+        {{--End big Column--}}
 
+        {{--Start left Column--}}
         <!--[if mso]></td><td width="288" style="width: 288px;" valign="top"><![endif]-->
 
         <table width="288" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 288px;">
           <tr>
             <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
-
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Ordförande har ordet</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">I take the good old fashioned ground that the whale is a fish, and call upon holy Jonah to back me. This fundamental thing settled, the next point is, in what internal respect does the whale differ from other fish.</div>
+               <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
+              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px"></div>
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$leftColumn1}}</div>
               <br>
             </td>
           </tr>
 
           <tr>
             <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
-             <img src="http://www.futf.se/img/nyhetsbrev/utbildningsutskottet.jpg" border="0" alt="Utbildningsutskottet" width="150" height="150" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Styrelsen hälsar!</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Here upon the very point of starting for the voyage, Captain Peleg and Captain Bildad were going it with a high hand on the quarter-deck, just as if they were to be joint-commanders at sea, as well as to all appearances in port.</div>
+             <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
+              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px"></div>
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px"> {{$leftColumn2}}</div>
               <br>
             </td>
           </tr>
 
         </table>
+        {{--End left Column--}}
 
-
+        {{--Start right Column--}}
           <!--[if mso]></td><td width="288" style="width: 288px;" valign="top"><![endif]-->
 
 
@@ -197,12 +201,22 @@ img {
           <tr>
             <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
              <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Styrelsen hälsar!</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Here upon the very point of starting for the voyage, Captain Peleg and Captain Bildad were going it with a high hand on the quarter-deck, just as if they were to be joint-commanders at sea, as well as to all appearances in port.</div>
+              {{--<div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Styrelsen hälsar!</div>--}}
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$rightColumn1}}</div>
+              <br>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
+             <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
+              {{--<div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">Styrelsen hälsar!</div>--}}
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$rightColumn2}}</div>
               <br>
             </td>
           </tr>
         </table>
+        {{--End right Column--}}
 
     </td>
   </tr>

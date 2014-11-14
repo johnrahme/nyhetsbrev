@@ -18,7 +18,7 @@ class MailController extends BaseController {
     public function index()
     {
 
-        Mail::send('mail.layouts.antowrk', array('test' => 'test'), function ($message) {
+        Mail::send('mail.layouts.an', array('test' => 'test'), function ($message) {
             $message->from('john.rahme.test@gmail.com', 'John Rahme');
 
             $message->to(array('john.rahme.se@gmail.com'))->subject('Nyhetsbrev Test');
@@ -37,13 +37,18 @@ class MailController extends BaseController {
     }
     public function viewdyn(){
 
-        return View::make('mail.layouts.antworkDyn')
+        return View::make('mail.layouts.antworkDynT')
             ->with('header', Input::get('header'))
             ->with('bigColumn', Input::get('bigColumn'))
             ->with('leftColumn1', Input::get('leftColumn1'))
             ->with('leftColumn2', Input::get('leftColumn2'))
             ->with('rightColumn1', Input::get('rightColumn1'))
-            ->with('rightColumn2', Input::get('rightColumn2'));
+            ->with('rightColumn2', Input::get('rightColumn2'))
+            ->with('bigColumnH', Input::get('bigColumnH'))
+            ->with('leftColumn1H', Input::get('leftColumn1H'))
+            ->with('leftColumn2H', Input::get('leftColumn2H'))
+            ->with('rightColumn1H', Input::get('rightColumn1H'))
+            ->with('rightColumn2H', Input::get('rightColumn2H'));
 
     }
     public function create(){
@@ -58,13 +63,18 @@ class MailController extends BaseController {
             'leftColumn1' => Input::get('leftColumn1'),
             'leftColumn2' => Input::get('leftColumn2'),
             'rightColumn1' => Input::get('rightColumn1'),
-            'rightColumn2' => Input::get('rightColumn2'));
+            'rightColumn2' => Input::get('rightColumn2'),
+            'bigColumnH' => Input::get('bigColumnH'),
+            'leftColumn1H' => Input::get('leftColumn1H'),
+            'leftColumn2H' => Input::get('leftColumn2H'),
+            'rightColumn1H' => Input::get('rightColumn1H'),
+            'rightColumn2H' => Input::get('rightColumn2H'));
 
 
-        Mail::send('mail.layouts.antworkDyn', $data, function ($message) {
-            $message->from('john.rahme.test@gmail.com', 'John Rahme');
+        Mail::send('mail.layouts.antworkDynT', $data, function ($message) {
+            $message->from('john.rahme.test@futf.se', 'John Rahme');
 
-            $message->to(array('john.rahme.se@gmail.com'))->subject('Nyhetsbrev Test');
+            $message->to(array('john.rahme.se@gmail.com'))->subject(Input::get('header'));
 
         });
 

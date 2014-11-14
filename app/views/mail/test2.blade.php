@@ -15,13 +15,18 @@
                 <p>
                 <h1> Send new mail </h1>
 
-                {{Form::label('header', 'Header')}} <br/>
+                {{Form::label('header', 'Mail Header')}} <br/>
 
                 {{Form::text('header')}}
 
                 </p>
 
                 <p>
+                {{Form::label('bigColumnH', 'Big Column Header')}}<br/>
+                {{Form::text('bigColumnH')}}
+                </p>
+                <p>
+
                 {{Form::label('bigColumn', 'Big Column')}} <br/>
                 <div class = "summernote" id="bigCol">Hello Summernote</div>
                 </p>
@@ -32,9 +37,17 @@
         <div class = "row">
             <div class = "col-md-6">
                 <p>
+                {{Form::label('leftColumn1H', 'Left Column 1 Header')}}<br/>
+                {{Form::text('leftColumn1H')}}
+                </p>
+                <p>
                 {{Form::label('leftColumn1', 'Left Column 1')}} <br/>
                  <div class = "summernote" id="leftCol1">Hello Summernote</div>
                </p>
+                <p>
+                {{Form::label('leftColumn2H', 'Left Column 2 Header')}}<br/>
+                {{Form::text('leftColumn2H')}}
+                </p>
                 <p>
                 {{Form::label('leftColumn2', 'Left Column 2')}} <br/>
                 <div class = "summernote" id="leftCol2">Hello Summernote</div>
@@ -44,14 +57,23 @@
             </div>
             <div class = "col-md-6">
                 <p>
+                {{Form::label('rightColumn1H', 'Right Column 1 Header')}}<br/>
+                {{Form::text('rightColumn1H')}}
+                </p>
+                <p>
                 {{Form::label('rightColumn1', 'Right Column 1')}} <br/>
                 <div class = "summernote" id="rightCol1">Hello Summernote</div>
+                </p>
+                <p>
+                {{Form::label('rightColumn2H', 'Right Column 2 Header')}}<br/>
+                {{Form::text('rightColumn2H')}}
                 </p>
                 <p>
                 {{Form::label('rightColumn2', 'Right Column 2')}} <br/>
                 <div class = "summernote" id="rightCol2">Hello Summernote</div>
                 </p>
-                <p> <button id="save" class="btn btn-primary" onclick="save()" type="button">Save</button> </p>
+                <p> <button id="send" class="btn btn-primary" onclick="save()" type="button">Send</button> </p>
+                <p> <button id="view" class="btn btn-primary" onclick="save()" type="button">View</button> </p>
 
             </div>
         </div>
@@ -84,14 +106,24 @@
  </script>
    <script>
 
-    $("#save").click(function(){
+    $("#send").click(function(){
         $("#bigColumn").val($('#bigCol').code());
         $("#leftColumn1").val($('#leftCol1').code());
         $("#leftColumn2").val($('#leftCol2').code());
         $("#rightColumn1").val($('#rightCol1').code());
         $("#rightColumn2").val($('#rightCol2').code());
+        $("#form1").attr("action", "senddynmail");
         $("#form1").submit();
 
+    });
+    $("#view").click(function(){
+        $("#bigColumn").val($('#bigCol').code());
+        $("#leftColumn1").val($('#leftCol1').code());
+        $("#leftColumn2").val($('#leftCol2').code());
+        $("#rightColumn1").val($('#rightCol1').code());
+        $("#rightColumn2").val($('#rightCol2').code());
+        $("#form1").attr("action", "viewdynmail");
+        $("#form1").submit();
     });
 
    </script>

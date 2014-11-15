@@ -192,11 +192,11 @@ img {
         <table width="288" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 288px;">
           <tr>
             <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
-                <tr>
+            {{--    <tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
                     <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>
-                </tr>
+                </tr>--}}
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
                     <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:0px">{{$leftColumn1H}}</div>
@@ -238,7 +238,7 @@ img {
             <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
                 <tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
-                    <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
+                    <img src="http://www.futf.se/img/nyhetsbrev/spel_eventbild.png" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>
                 </tr>
                 <tr>

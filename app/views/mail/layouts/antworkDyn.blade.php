@@ -99,6 +99,7 @@ img {
       margin-top: 0 !important;
       float: left;
     }
+
 }
 @media screen and (max-width: 400px) {
   td[class="cols-wrapper"] {
@@ -110,6 +111,7 @@ img {
     padding-left: 12px !important;
     padding-right: 12px !important;
   }
+
 }
 </style>
 
@@ -131,7 +133,7 @@ img {
 
 <table width="600" border="0" cellpadding="0" cellspacing="0" class="force-row" style="width: 600px;">
   <tr>
-    <td class="content-wrapper" style="padding-left:16px;padding-right:16px">
+    <td class="content-wrapper" style="padding-left:12px;padding-right:12px">
       <br>
       <img src="http://www.futf.se/img/nyhetsbrev/topbanner.gif" border="0" alt="Logo" width="700" height="90" hspace="0" vspace="0" style="max-width:100%; " class="banner">
     </td>
@@ -139,7 +141,7 @@ img {
     <tr>
       <td align = "center" class="content-wrapper" style="padding-left:24px;padding-right:24px">
         <br>
-        <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:30px;font-weight:600;color:#000000;margin-top:18px">{{$header}}</div>
+        <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:30px;font-weight:600;color:#000000;margin-top:18px">{{$header}}</div>
       </td>
     </tr>
 
@@ -156,10 +158,12 @@ img {
         <table width="576" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 576px;">
           <tr>
             <td class="col" valign="top" align = "center" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
-             <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg"  border="0" alt="Styrelsen hälsar" width="450" height="300" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle2" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$bigColumnH}}</div>
-              <br>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$bigColumn}}</div>
+
+            <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="450" height="300" hspace="0" vspace="0" style="max-width:100%; " class="image">
+
+
+              <div class="subtitle2" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$bigColumnH}}</div>
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:25px">{{$bigColumn}}</div>
               <br>
 
             </td>
@@ -173,19 +177,20 @@ img {
 
         <table width="288" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 288px;">
           <tr>
-            <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
+            <td class="col" valign="top" align = "center" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px; border-top: 1px solid #eee">
                <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$leftColumn1H}}</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$leftColumn1}}</div>
+              <div class="subtitle2" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$leftColumn1H}}</div>
+
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:25px">{{$leftColumn1}}</div>
               <br>
             </td>
           </tr>
 
           <tr>
-            <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
+            <td class="col" valign="top" align = "center" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 1px solid #eee">
              <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$leftColumn2H}}</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px"> {{$leftColumn2}}</div>
+              <div class="subtitle2" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$leftColumn2H}}</div>
+              <div class="col-copy" style="font-family:Tahoma, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:25px"> {{$leftColumn2}}</div>
               <br>
             </td>
           </tr>
@@ -199,19 +204,20 @@ img {
 
         <table width="288" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 288px;">
           <tr>
-            <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
+            <td class="col" valign="top" align = "center" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 1px solid #eee">
              <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$rightColumn1H}}</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$rightColumn1}}</div>
+              <div class="subtitle2" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$rightColumn1H}}</div>
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:25px">{{$rightColumn1}}</div>
               <br>
             </td>
           </tr>
 
           <tr>
-            <td class="col" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
-             <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100%; " class="image">
-              <div class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$rightColumn2H}}</div>
-              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$rightColumn2}}</div>
+            <td class="col" valign="top" align = "center" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px; border-top: 1px solid #eee">
+             <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" align = "middle" border="0" alt="Styrelsen hälsar" width="200" height="130" hspace="0" vspace="0" style="max-width:100% " class="image">
+              <div class="subtitle2" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:18px">{{$rightColumn2H}}</div>
+
+              <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:25px">{{$rightColumn2}}</div>
               <br>
             </td>
           </tr>

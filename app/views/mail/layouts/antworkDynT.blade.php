@@ -192,7 +192,7 @@ img {
         <table width="288" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 288px;">
           <tr>
             <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
-            {{--    <tr>
+            {{--<tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
                     <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>

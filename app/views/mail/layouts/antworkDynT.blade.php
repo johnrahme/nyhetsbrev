@@ -225,7 +225,7 @@ img {
 
             </td>
           </tr>
-
+          {{--Extra bild--}}
           <tr>
             <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
                 <tr>
@@ -233,6 +233,14 @@ img {
                     <img src="http://www.futf.se/img/nyhetsbrev/idrottsutskottet.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>
                 </tr>
+                  <br>
+
+            </td>
+          </tr>
+
+        {{-- Left 2 --}}
+          <tr>
+            <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
                     <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$rightColumn2H}}</div>
@@ -283,7 +291,7 @@ img {
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
                     <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">Kontakt</div>
-                    <div class="col-copy" style="font-family:Tahoma, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Har du frågor till någon i styrelsen tveka inte att skicka ett <a href = "http://www.futf.se/kontakt">mail</a>.<br> Är du intresserad av att få information från de olika utskotten så registrera din mailadress <a href = "http://www.futf.se/nyhetsbrev">här</a>. <br>När händer saker? Prenumerera på <a href = "http://www.futf.se/student/kalender">futf-kalendern!</a></div>
+                    <div class="col-copy" style="font-family:Tahoma, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Har du frågor eller idéer så tveka inte att skicka ett <a href = "http://www.futf.se/kontakt">mail</a> till någon i styrelsen.<br> Är du intresserad av att få information från de olika utskotten så registrera din mailadress <a href = "http://www.futf.se/nyhetsbrev">här</a>. <br>När händer saker? Prenumerera på <a href = "http://www.futf.se/student/kalender">futf-kalendern!</a></div>
                     </td>
                 </tr>
                   <br>

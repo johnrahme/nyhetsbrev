@@ -19,9 +19,9 @@ class MailController extends BaseController {
     {
 
         Mail::send('mail.layouts.an', array('test' => 'test'), function ($message) {
-            $message->from('john.rahme.test@gmail.com', 'John Rahme');
+            $message->from('it@futf.se', 'John Rahme');
 
-            $message->to(array('john.rahme.se@gmail.com'))->subject('Nyhetsbrev Test');
+            $message->to(array('styrelse@futf.se'))->subject('Nyhetsbrev Test');
 
         });
 
@@ -72,9 +72,9 @@ class MailController extends BaseController {
 
 
         Mail::send('mail.layouts.antworkDynT', $data, function ($message) {
-            $message->from('john.rahme.test@futf.se', 'John Rahme');
+            $message->from('it@futf.se', 'John Rahme');
 
-            $message->to(array('www.kj.com@hotmail.com'))->subject(Input::get('header'));
+            $message->to(array('styrelse@futf.se'))->subject(Input::get('header'));
 
         });
 

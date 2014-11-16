@@ -174,7 +174,7 @@ img {
                 </tr>
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
-                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:0px">{{$bigColumnH}}</div>
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$bigColumnH}}</div>
                     <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$bigColumn}}</div>
                     </td>
                 </tr>
@@ -199,8 +199,26 @@ img {
                 </tr>--}}
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
-                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:0px">{{$leftColumn1H}}</div>
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$leftColumn1H}}</div>
                     <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$leftColumn1}}</div>
+                    </td>
+                </tr>
+                  <br>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
+               {{-- <tr>
+                    <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
+                    <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
+                    </td>
+                </tr>--}}
+                <tr>
+                    <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$leftColumn2H}}</div>
+                    <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$leftColumn2}}</div>
                     </td>
                 </tr>
                   <br>
@@ -212,13 +230,13 @@ img {
             <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
                 <tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
-                    <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
+                    <img src="http://www.futf.se/img/nyhetsbrev/idrottsutskottet.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>
                 </tr>
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
-                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:0px">{{$leftColumn2H}}</div>
-                    <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$leftColumn2}}</div>
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$rightColumn2H}}</div>
+                    <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$rightColumn2}}</div>
                     </td>
                 </tr>
                   <br>
@@ -243,26 +261,8 @@ img {
                 </tr>
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
-                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:0px">{{$rightColumn1H}}</div>
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$rightColumn1H}}</div>
                     <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$rightColumn1}}</div>
-                    </td>
-                </tr>
-                  <br>
-
-            </td>
-          </tr>
-
-          <tr>
-            <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
-                <tr>
-                    <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
-                    <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
-                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#2469A0;margin-top:0px">{{$rightColumn2H}}</div>
-                    <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$rightColumn2}}</div>
                     </td>
                 </tr>
                   <br>
@@ -271,6 +271,28 @@ img {
           </tr>
         </table>
         {{--End right Column--}}
+ {{--Start bottom Column--}}
+        <!--[if mso]>
+          <table border="0" width="576" cellpadding="0" cellspacing="0" style="width: 576px;">
+          <tr><td width="576" style="width: 576px;" valign="top"><![endif]-->
+
+
+        <table width="576" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 576px;">
+          <tr>
+            <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px; border-top: 2px solid #eee">
+                <tr>
+                    <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">Kontakt</div>
+                    <div class="col-copy" style="font-family:Tahoma, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Har du frågor till någon i styrelsen tveka inte att skicka ett <a href = "http://www.futf.se/kontakt">mail</a>.<br> Är du intresserad av att få information från de olika utskotten så registrera din mailadress <a href = "http://www.futf.se/nyhetsbrev">här</a>. <br>När händer saker? Prenumerera på <a href = "http://www.futf.se/student/kalender">futf-kalendern!</a></div>
+                    </td>
+                </tr>
+                  <br>
+
+            </td>
+          </tr>
+        </table>
+
+        {{--End Bottom Column--}}
 
     </td>
   </tr>
@@ -281,7 +303,7 @@ img {
         <tr>
           <td class="container-padding footer-text" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-left:24px;padding-right:24px">
             <br><br>
-            Om du inte längre vill ha mail från futf så kontakta <a href="mailto:it@futf.se" style="color:#aaaaaa">it@futf.se</a>
+            Du får detta mailsom inskriven student på Civilingenjörsprogrammet i Teknisk Fysik. Om du vill sluta få mail ifrån Föreningen Uppsala Tekniska Fysiker kan du höra av dig till <a href="mailto:it@futf.se" style="color:#aaaaaa">it@futf.se</a>
             <br><br>
 
             <strong>Föreningen Uppsala Tekniska Fysiker</strong><br>
@@ -296,6 +318,7 @@ img {
           </td>
         </tr>
       </table>
+
 <!--/600px container -->
 
 

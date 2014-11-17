@@ -76,5 +76,13 @@ Route::post('senddynmail', array('as'=>'senddynmail','uses' => 'MailController@s
 
 Route::get('createdynmail', array('as'=>'createdynmail','uses' => 'MailController@create'));
 
+//Actually dynamic mail
+
+Route::put('emails/update', array('uses' => 'EmailController@update'));
+
+Route::resource('emails', 'EmailController'); //['only' => ['store', 'index', 'create', 'destroy']
+
+
+
 
 

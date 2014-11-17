@@ -32,7 +32,7 @@
             <ul class = "nav navbar-nav navbar-right">
 
                 <li class = "active"> {{link_to('viewmail','Start')}}</li>
-                <li> {{link_to_route('mail','Mail')}}</li>
+                <li> {{link_to_route('emails.index','Mail')}}</li>
                 <li> {{link_to_route('createdynmail','Create')}}</li>
             </ul>
         </div>

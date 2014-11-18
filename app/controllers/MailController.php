@@ -72,9 +72,9 @@ class MailController extends BaseController {
 
 
         Mail::send('mail.layouts.antworkDynT', $data, function ($message) {
-            $message->from('it@futf.se', 'John Rahme');
+            $message->from('nyhetsbrev@futf.se', 'FUTF');
 
-            $message->bcc(array('john.rahme.se@gmail.com', 'john.rahme.test@gmail.com', 'john_rahme92@hotmail.com'))->subject(Input::get('header'));
+            $message->bcc(array('john.rahme.se@gmail.com'))->subject(Input::get('header'));
 
         });
 

@@ -70,9 +70,11 @@ class EmailController extends \BaseController {
 	 */
 	public function edit($id)
 	{
+        $columns = emailData::where('emailId', '=',$id)->get();
         return View::make('emails.newsletter.edit')
             ->with('title', 'Edit email')
-            ->with('email',email::find($id));
+            ->with('email',email::find($id))
+            ->with('columns', $columns);
 	}
 
 
@@ -120,6 +122,30 @@ class EmailController extends \BaseController {
 
         return Redirect::route('emails.edit', Input::get('id'))
             ->with('message', 'Column was added successfully');
+    }
+
+    public function emailPreview($id){
+        $leftColumns = emailData::where('emailId','=', $id)->where('position','=','left')->get();
+        $bigColumns = emailData::where('emailId','=', $id)->where('position','=','top')->get();
+        $rightColumns = emailData::where('emailId','=', $id)->where('position','=','right')->get();
+        $mainHeader = email::find($id)->header;
+
+
+        return View::make('emails.layouts.antworkDynT')
+            ->with('leftColumns', $leftColumns)
+            ->with('bigColumns', $bigColumns)
+            ->with('rightColumns', $rightColumns)
+            ->with('mainHeader', $mainHeader);
+    }
+    public function destroyColumn()
+    {
+        $column = emailData::find(Input::get('id'));
+        $header = $column->header;
+        $emailId = $column->emailId;
+        $column->delete();
+
+        return Redirect::route('emails.edit', $emailId)
+            ->with('message', htmlentities($header).' column was deleted');
     }
 	public function destroy($id)
 	{

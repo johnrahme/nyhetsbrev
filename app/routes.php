@@ -78,10 +78,15 @@ Route::get('createdynmail', array('as'=>'createdynmail','uses' => 'MailControlle
 
 //Actually dynamic mail
 
-Route::put('emails/update', array('uses' => 'EmailController@update'));
-Route::post('emails/{id}/addcolumn',array('as' => 'emails.column.create', 'uses' =>'EmailController@addColumn'));
+Route::put('emails/{id}/addcolumn',array('as' => 'emails.column.create', 'uses' =>'EmailController@addColumn'));
+
+Route::delete('emails/column/destroy', array('as'=>'emails.column.destroy', 'uses'=>'EmailController@destroyColumn'));
+
+Route::get('emails/preview/{id}', array('as'=>'emails.preview', 'uses' => 'EmailController@emailPreview'));
 
 Route::resource('emails', 'EmailController'); //['only' => ['store', 'index', 'create', 'destroy']
+
+
 
 
 

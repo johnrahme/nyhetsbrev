@@ -25,7 +25,7 @@ class Emails extends Migration {
 	 * @return void
 	 */
 	public function down()
-	{
+	{   Schema::drop('emailData');
 		Schema::drop('emails');
 	}
 

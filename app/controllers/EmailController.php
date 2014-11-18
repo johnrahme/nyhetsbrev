@@ -101,12 +101,26 @@ class EmailController extends \BaseController {
 	}
 
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    public function addColumn(){
+
+
+        $validation = emailData::validate(Input::all());
+        $id = Input::get('id');
+
+        if($validation->fails()){
+            return Redirect::route('emails.edit', $id)->withErrors($validation);
+        }
+
+        $emailData = new emailData;
+        $emailData->emailId = Input::get('id');
+        $emailData->header = Input::get('columnH');
+        $emailData->content = Input::get('column');
+        $emailData->position = Input::get('position');
+        $emailData->save();
+
+        return Redirect::route('emails.edit', Input::get('id'))
+            ->with('message', 'Column was added successfully');
+    }
 	public function destroy($id)
 	{
         $id = Input::get('id');

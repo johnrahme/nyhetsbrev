@@ -11,7 +11,7 @@
 
 		{{Form::text('name')}}
 
-	</p>
+	    </p>
 	
 	<p> {{Form::submit('Add Email')}} </p>
 	{{Form::close()}}

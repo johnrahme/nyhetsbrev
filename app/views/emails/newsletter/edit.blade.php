@@ -14,7 +14,7 @@
     <div class = "container-fluid">
         <div class = "row">
             <div class = "col-md-12" style="border-bottom: 1px solid #808080">
-                {{Form::open(array('route'=> 'emails.update','method' => 'put','id'=>'form1'))}}
+                {{Form::open(array('route'=> 'emails.update','method' => 'put','id'=>'form1', 'files'=>true))}}
 
             		<p class = 'text-center'>
             		{{Form::label('name', 'Namn')}} <br/>
@@ -56,6 +56,10 @@
                  {{Form::hidden('column')}}
                </p>
                <p>
+                   {{Form::label('image', 'Bild')}} <br/>
+                   {{ Form::file('image')}} <br/>
+               </p>
+               <p>
                <p> <button id="add" class="btn btn-primary" onclick="save()" type="button">Add Column</button> </p>
                </p>
             </div>
@@ -78,11 +82,12 @@
                        <tr>
                         <td>{{$column->header}} </td>
                         <td>{{$column->position}}</td>
-                        <td>edit</td>
+                        <td>{{ link_to_route('emails.column.edit', 'Edit', array($column->id)) }}</td>
+
                         <td>{{ Form::open(array('route'=>'emails.column.destroy', 'method' =>'DELETE')) }}
-                                                            {{ Form::hidden('id', $column->id)}}
-                                                            {{ Form::submit('Delete') }}
-                                                            {{ Form::close() }}</td>
+                            {{ Form::hidden('id', $column->id)}}
+                            {{ Form::submit('Delete') }}
+                            {{ Form::close() }}</td>
                       </tr>
                       @endforeach
                     </tbody>

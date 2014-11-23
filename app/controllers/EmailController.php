@@ -118,6 +118,20 @@ class EmailController extends \BaseController {
         $emailData->header = Input::get('columnH');
         $emailData->content = Input::get('column');
         $emailData->position = Input::get('position');
+
+        if(Input::hasFile('image')) {
+            if (Input::file('image')->isValid()) {
+                $imgName = Input::file('image')->getClientOriginalName();
+                $imgExtension = Input::file('image')->getClientOriginalExtension();
+                $saveName =microtime().'_'.$imgName;
+                Input::file('image')->move('img/emails', $saveName);
+                $URL = 'img/emails/'.$saveName;
+                $emailData->pictureUrl = $URL;
+            }
+        }
+
+
+
         $emailData->save();
 
         return Redirect::route('emails.edit', Input::get('id'))
@@ -137,11 +151,63 @@ class EmailController extends \BaseController {
             ->with('rightColumns', $rightColumns)
             ->with('mainHeader', $mainHeader);
     }
+    public  function editColumn($id){
+        $column = emailData::find($id);
+        return View::make('emails.newsletter.editColumn')
+            ->with('title', 'Edit Column')
+            ->with('column', $column);
+
+    }
+
+    public  function updateColumn (){
+        $id = Input::get('id');
+        $validation = emailData::validate(Input::all());
+
+        if($validation->fails()){
+            return Redirect::route('emails.column.edit', $id)->withErrors($validation);
+        }
+        $emailData  = emailData::find($id);
+        $emailData->header = Input::get('columnH');
+        $emailData->content = Input::get('column');
+        $emailData->position = Input::get('position');
+
+        //Jobbar med bilden:
+
+        if(Input::hasFile('image')) {
+            if (Input::file('image')->isValid()) {
+                if($emailData->pictureUrl != ""){
+                    File::delete($emailData->pictureUrl);
+                }
+                $imgName = Input::file('image')->getClientOriginalName();
+                $imgExtension = Input::file('image')->getClientOriginalExtension();
+                $saveName =microtime().'_'.$imgName;
+                Input::file('image')->move('img/emails', $saveName);
+                $URL = 'img/emails/'.$saveName;
+                $emailData->pictureUrl = $URL;
+            }
+        }
+        else{
+            if(Input::get('pictureChanged') == 1){
+                File::delete($emailData->pictureUrl);
+                $emailData->pictureUrl = "";
+            }
+
+
+        }
+
+        $emailData->save();
+        return Redirect::route('emails.edit', $emailData->emailId)
+            ->with('message', 'Column updated successfully');
+
+    }
     public function destroyColumn()
     {
         $column = emailData::find(Input::get('id'));
         $header = $column->header;
         $emailId = $column->emailId;
+        if($column->pictureUrl != "") {
+            File::delete($column->pictureUrl);
+        }
         $column->delete();
 
         return Redirect::route('emails.edit', $emailId)

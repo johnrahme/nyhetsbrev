@@ -82,7 +82,11 @@ Route::put('emails/{id}/addcolumn',array('as' => 'emails.column.create', 'uses' 
 
 Route::delete('emails/column/destroy', array('as'=>'emails.column.destroy', 'uses'=>'EmailController@destroyColumn'));
 
-Route::get('emails/preview/{id}', array('as'=>'emails.preview', 'uses' => 'EmailController@emailPreview'));
+Route::get('emails/column/{id}/edit', array('as'=>'emails.column.edit', 'uses'=>'EmailController@editColumn'));
+
+Route::put('emails/column/update',array('as' => 'emails.column.update', 'uses' =>'EmailController@updateColumn'));
+
+Route::get('emails/{id}/preview', array('as'=>'emails.preview', 'uses' => 'EmailController@emailPreview'));
 
 Route::resource('emails', 'EmailController'); //['only' => ['store', 'index', 'create', 'destroy']
 

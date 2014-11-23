@@ -169,11 +169,13 @@ img {
         @foreach($bigColumns as $bigColumn)
           <tr>
             <td class="col1" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">
+                @if($bigColumn->pictureUrl != "")
                 <tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
-                    <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="576" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
+                    <img src= "{{URL::to('/')}}/{{$bigColumn->pictureUrl}}" border="0" alt="Styrelsen hälsar" width="576" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>
                 </tr>
+                @endif
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
                     <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$bigColumn->header}}</div>
@@ -196,11 +198,13 @@ img {
         @foreach($leftColumns as $leftColumn)
           <tr>
             <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
-            {{--<tr>
+                @if($leftColumn->pictureUrl != "")
+                <tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
-                    <img src="http://www.futf.se/img/nyhetsbrev/styrelsen2.jpg" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
+                    <img src= "{{URL::to('/')}}/{{$leftColumn->pictureUrl}}" border="0" alt="Styrelsen hälsar" width="576" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>
-                </tr>--}}
+                </tr>
+                @endif
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
                     <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$leftColumn->header}}</div>
@@ -224,11 +228,13 @@ img {
         @foreach($rightColumns as $rightColumn)
           <tr>
             <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
-                {{--<tr>
+                @if($rightColumn->pictureUrl != "")
+                <tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
-                    <img src="http://www.futf.se/img/nyhetsbrev/spel_eventbild.png" border="0" alt="Styrelsen hälsar" width="288" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
+                    <img src= "{{URL::to('/')}}/{{$rightColumn->pictureUrl}}" border="0" alt="Styrelsen hälsar" width="576" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
                     </td>
-                </tr>--}}
+                </tr>
+                @endif
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
                     <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$rightColumn->header}}</div>

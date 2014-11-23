@@ -23,7 +23,8 @@ class EmailData extends Eloquent implements UserInterface, RemindableInterface {
      */
 
     public static $rules = array(
-        'columnH' => 'required|min:2'
+        'columnH' => 'required|min:2',
+        'image' => 'image'
     );
 
 

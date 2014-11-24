@@ -160,12 +160,24 @@ img {
 
 
         {{--Start Big Column--}}
-        <!--[if mso]>
+
           <table border="0" width="576" cellpadding="0" cellspacing="0" style="width: 576px;">
-          <tr><td width="576" style="width: 576px;" valign="top"><![endif]-->
+          <tr><td width="576" style="width: 576px;" valign="top">
 
 
         <table width="576" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 576px;">
+        {{--Extra för att det ska bli symmetrisk--}}
+        <tr>
+            <td class="col1" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:30px">
+                <tr>
+                    <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px"></div>
+<div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px"></div>
+                    </td>
+                </tr>
+            </td>
+        </tr>
+        <br>
         @foreach($bigColumns as $bigColumn)
           <tr>
             <td class="col1" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px">

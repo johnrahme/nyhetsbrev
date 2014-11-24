@@ -142,7 +142,7 @@ class EmailController extends \BaseController {
         $leftColumns = emailData::where('emailId','=', $id)->where('position','=','left')->get();
         $bigColumns = emailData::where('emailId','=', $id)->where('position','=','top')->get();
         $rightColumns = emailData::where('emailId','=', $id)->where('position','=','right')->get();
-        $mainHeader = email::find($id)->header;
+        $mainHeader = email::find($id)->name;
 
 
         return View::make('emails.layouts.antworkDynT')
@@ -218,6 +218,10 @@ class EmailController extends \BaseController {
         $id = Input::get('id');
         $email = email::find($id);
         $name = $email->name;
+        $emailDatas = emailData::where('emailId','=',$id)->get();
+        foreach($emailDatas as $emailData){
+            $emailData->delete();
+        }
         $email->delete();
 
         return Redirect::route('emails.index')

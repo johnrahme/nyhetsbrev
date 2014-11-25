@@ -158,17 +158,19 @@ img {
   <tr>
     <td class="cols-wrapper" style="padding-left:12px;padding-right:12px">
 
+
         {{--Start Big Column--}}
-        <!--[if mso]>
+
           <table border="0" width="576" cellpadding="0" cellspacing="0" style="width: 576px;">
-          <tr><td width="576" style="width: 576px;" valign="top"><![endif]-->
+          <tr><td width="576" style="width: 576px;" valign="top">
 
 
         <table width="576" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 576px;">
 
+        <br>
         @foreach($bigColumns as $bigColumn)
           <tr>
-            <td class="col1" valign="top"  style="padding-left:12px;padding-right:12px;padding-bottom:19px">
+            <td class="col1" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:10px;padding-bottom:1px">
                 @if($bigColumn->pictureUrl != "")
                 <tr>
                     <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
@@ -195,28 +197,28 @@ img {
         <!--[if mso]></td><td width="288" style="width: 288px;" valign="top"><![endif]-->
 
         <table width="288" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row" style="width: 288px;">
-               @foreach($leftColumns as $leftColumn)
-                 <tr>
-                   <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
-                       @if($leftColumn->pictureUrl != "")
-                       <tr>
-                           <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
-                           <img src= "{{URL::to('/')}}/{{$leftColumn->pictureUrl}}" border="0" alt="Styrelsen hälsar" width="576" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
-                           </td>
-                       </tr>
-                       @endif
-                       <tr>
-                           <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
-                           <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$leftColumn->header}}</div>
-                           <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$leftColumn->content}}</div>
-                           </td>
-                       </tr>
-                         <br>
+        @foreach($leftColumns as $leftColumn)
+          <tr>
+            <td class="col" valign="top"  style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px;border-top: 2px solid #eee">
+                @if($leftColumn->pictureUrl != "")
+                <tr>
+                    <td valign="top" align = "center"  style="padding-left:12px;padding-right:12px; padding-bottom:20px">
+                    <img src= "{{URL::to('/')}}/{{$leftColumn->pictureUrl}}" border="0" alt="Styrelsen hälsar" width="576" height="auto" hspace="0" vspace="0" style="max-width:100%; " class="image2">
+                    </td>
+                </tr>
+                @endif
+                <tr>
+                    <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
+                    <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">{{$leftColumn->header}}</div>
+                    <div class="col-copy" style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">{{$leftColumn->content}}</div>
+                    </td>
+                </tr>
+                  <br>
 
-                   </td>
-                 </tr>
-               @endforeach
-               </table>
+            </td>
+          </tr>
+        @endforeach
+        </table>
         {{--End left Column--}}
 
         {{--Start right Column--}}

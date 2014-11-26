@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Event extends Eloquent implements UserInterface, RemindableInterface {
+class Utbildningsutskottet extends Eloquent implements UserInterface, RemindableInterface {
 
     use UserTrait, RemindableTrait;
 
@@ -14,7 +14,7 @@ class Event extends Eloquent implements UserInterface, RemindableInterface {
      *
      * @var string
      */
-    protected $table = 'events';
+    protected $table = 'utbildningsutskottet';
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -23,20 +23,12 @@ class Event extends Eloquent implements UserInterface, RemindableInterface {
      */
 
     public static $rules = array(
-        'name' => 'required|min:2',
-        'description' => 'required|min:10',
-        'image' => 'image'
-    );
-    public static $rules2 = array(
-        'image' => 'image'
+        'name' => 'required|min:2'
     );
 
 
     public static function validate ($data){
         return Validator::make($data, static::$rules);
-    }
-    public static function validateImage($data){
-        return Validator::make($data, static::$rules2);
     }
 
 }

@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Registration extends Eloquent implements UserInterface, RemindableInterface {
+class Arbetsmarknadsutskottet extends Eloquent implements UserInterface, RemindableInterface {
 
     use UserTrait, RemindableTrait;
 
@@ -14,7 +14,7 @@ class Registration extends Eloquent implements UserInterface, RemindableInterfac
      *
      * @var string
      */
-    protected $table = 'registrations';
+    protected $table = 'arbetsmarknadsutskottet';
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -23,7 +23,7 @@ class Registration extends Eloquent implements UserInterface, RemindableInterfac
      */
 
     public static $rules = array(
-        //Sätt rules
+        'name' => 'required|min:2'
     );
 
 

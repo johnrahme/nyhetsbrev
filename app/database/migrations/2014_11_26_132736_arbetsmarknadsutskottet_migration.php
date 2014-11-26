@@ -14,7 +14,8 @@ class ArbetsmarknadsutskottetMigration extends Migration {
     {
         Schema::create('arbetsmarknadsutskottet', function($table){
             $table->increments('id');
-            $table->string('name');
+            $table->string('Name');
+            $table->string('Email');
             $table->timestamps();
         });
     }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class IdrottsutskottetMigration extends Migration {
+class Users extends Migration {
 
     /**
      * Run the migrations.
@@ -12,10 +12,12 @@ class IdrottsutskottetMigration extends Migration {
      */
     public function up()
     {
-        Schema::create('idrottsutskottet', function($table){
+        Schema::create('users', function($table){
             $table->increments('id');
-            $table->string('Name');
-            $table->string('Email');
+            $table->string('username');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -26,7 +28,8 @@ class IdrottsutskottetMigration extends Migration {
      * @return void
      */
     public function down()
-    {   Schema::drop('idrottsutskottet');
+    {
+        Schema::drop('users');
     }
 
 }

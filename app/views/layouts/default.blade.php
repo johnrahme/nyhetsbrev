@@ -33,7 +33,7 @@
 
                 <li class = "active"> {{link_to('/','Start')}}</li>
                 <li> {{link_to_route('emails.index','Mail')}}</li>
-                <li></li>
+                <li>{{link_to_route('download','Nedladdning')}}</li>
             </ul>
         </div>
     </div>

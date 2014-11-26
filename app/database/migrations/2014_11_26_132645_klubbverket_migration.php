@@ -14,7 +14,8 @@ class KlubbverketMigration extends Migration {
     {
         Schema::create('klubbverket', function($table){
             $table->increments('id');
-            $table->string('name');
+            $table->string('Name');
+            $table->string('Email');
             $table->timestamps();
         });
     }

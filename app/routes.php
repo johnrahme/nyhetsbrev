@@ -44,6 +44,11 @@ Route::resource('emails', 'EmailController'); //['only' => ['store', 'index', 'c
 
 Route::put('signup', array('as'=>'signup', 'uses' =>'RegistrationController@register'));
 
+//Nedladdning
+
+Route::get('download', array('as'=>'download', 'uses' =>'DownloadController@index'));
+
+
 
 
 

@@ -23,7 +23,7 @@
 
 								<label for = "contact-name" class = "col-lg-2" control-label>Namn</label>
 								<div class = "col-lg-10">
-									<input type = "text" class = "form-control" id = "contact-name" name="contact-name" placeholder = "Namn" value = "">
+									{{Form::text('contact-name','',array('class'=>'form-control', 'placeholder' =>'Namn'))}}
 
 								</div>
 
@@ -31,7 +31,7 @@
 							<div class = "form-group">
 								<label for = "contact-email" class = "col-lg-2" control-label>Email</label>
 								<div class = "col-lg-10">
-									<input type = "email" class = "form-control" id = "contact-email" name = "contact-email" placeholder = "u@example.com">
+									{{Form::email('contact-email','',array('class'=>'form-control', 'placeholder' =>'u@example.com'))}}
 
 								</div>
 
@@ -40,7 +40,7 @@
 							<div class = "form-group">
 								<label for = "contact-email" class = "col-lg-2" control-label>Email igen </label>
 								<div class = "col-lg-10">
-									<input type = "email" class = "form-control" id = "contact-email-again" name = "contact-email-again" placeholder = "u@example.com">
+									{{Form::email('contact-email_confirmation','',array('class'=>'form-control', 'placeholder' =>'u@example.com'))}}
 
 								</div>
 
@@ -49,25 +49,25 @@
 							<div class = "form-group">
 								<div class="checkbox">
 								  <label>
-									<input type="checkbox" name="utbildningsutskottet" id="option1" value="option1">
+									{{Form::checkbox('option1','option1', true)}}
 									Utbildningsutstkottet
 								  </label>
 								</div>
 								<div class="checkbox">
 								  <label>
-									<input type="checkbox" name="klubbverket" id="option2" value="option2">
+									{{Form::checkbox('option2','option2', true)}}
 									Klubbverket
 								  </label>
 								</div>
 								<div class="checkbox">
 								  <label>
-									<input type="checkbox" name="idrottsutskottet" id="option3" value="option3" >
+									{{Form::checkbox('option3','option3', true)}}
 									Idrottsutskottet
 								  </label>
 								</div>
 								<div class="checkbox">
 								  <label>
-									<input type="checkbox" name="arbetsmarknadsutskottet" id="option4" value="option4" >
+									{{Form::checkbox('option4','option4', true)}}
 									Arbetsmarknadsutskottet
 								  </label>
 								</div>
@@ -76,7 +76,7 @@
 
 						</div>
 						<div class = "modal-footer">
-							<button class = "btn btn-primary" type = "button" name = "connect" id = "connect" >Registrera</button>
+							<button class = "btn btn-primary" type = "submit" name = "connect" id = "connect" >Registrera</button>
 						</div>
 					{{Form::close()}}
 				</div>

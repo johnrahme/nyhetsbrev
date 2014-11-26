@@ -47,6 +47,7 @@ Route::put('signup', array('as'=>'signup', 'uses' =>'RegistrationController@regi
 //Nedladdning
 
 Route::get('download', array('as'=>'download', 'uses' =>'DownloadController@index'));
+Route::put('download/get', array('as'=>'download.get', 'uses' =>'DownloadController@get'));
 
 
 

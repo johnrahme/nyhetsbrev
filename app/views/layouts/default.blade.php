@@ -20,7 +20,7 @@
 <div class = "navbar navbar-inverse navbar-static-top">
     <div class = "container">
         <div class = "navbar-header">
-            <a href = "#" class = "navbar-brand"> FUTF:s alumnsida</a>
+            <a href = "#" class = "navbar-brand"> FUTF:s nyhetsbrev</a>
             <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
                 <span class = "icon-bar"> </span>
                 <span class = "icon-bar"> </span>
@@ -30,10 +30,18 @@
         </div>
         <div class = "navbar-collapse collapse navHeaderCollapse" >
             <ul class = "nav navbar-nav navbar-right">
-
+                @if(Auth::check())
                 <li class = "active"> {{link_to('/','Start')}}</li>
                 <li> {{link_to_route('emails.index','Mail')}}</li>
                 <li>{{link_to_route('download','Nedladdning')}}</li>
+                @if(Auth::user()->level == 2)
+                <li>{{link_to_route('user','Användare')}}</li>
+                @endif
+                <li>{{link_to_route('logout','Logga ut')}}</li>
+                @else
+                <li class = "active"> {{link_to('/','Start')}}</li>
+                <li>{{link_to_route('login','Logga In')}}</li>
+                @endif
             </ul>
         </div>
     </div>

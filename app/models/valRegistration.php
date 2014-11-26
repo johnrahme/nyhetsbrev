@@ -3,8 +3,8 @@
 class valRegistration{
 
     public static $rules = array(
-        'contact-name' => 'required',
-        'contact-email' =>'required|confirmed|email'
+        'name' => 'required',
+        'email' =>'required|confirmed|email'
     );
 
 

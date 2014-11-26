@@ -18,12 +18,15 @@
 							<h4> Nyhetsbrev</h4>
 						</div>
 						<div class = "modal-body">
-
+						@if(Session::has('failMessage'))
+						    <p style = "color: #FF0000;"> {{Session::get('failMessage')}} </p>
+						@endif
+                            @include('common.registration_errors')
 							<div class = "form-group">
 
 								<label for = "contact-name" class = "col-lg-2" control-label>Namn</label>
 								<div class = "col-lg-10">
-									{{Form::text('contact-name','',array('class'=>'form-control', 'placeholder' =>'Namn'))}}
+									{{Form::text('name','',array('class'=>'form-control', 'placeholder' =>'Namn'))}}
 
 								</div>
 
@@ -31,7 +34,7 @@
 							<div class = "form-group">
 								<label for = "contact-email" class = "col-lg-2" control-label>Email</label>
 								<div class = "col-lg-10">
-									{{Form::email('contact-email','',array('class'=>'form-control', 'placeholder' =>'u@example.com'))}}
+									{{Form::email('email','',array('class'=>'form-control', 'placeholder' =>'u@example.com'))}}
 
 								</div>
 
@@ -40,7 +43,7 @@
 							<div class = "form-group">
 								<label for = "contact-email" class = "col-lg-2" control-label>Email igen </label>
 								<div class = "col-lg-10">
-									{{Form::email('contact-email_confirmation','',array('class'=>'form-control', 'placeholder' =>'u@example.com'))}}
+									{{Form::email('email_confirmation','',array('class'=>'form-control', 'placeholder' =>'u@example.com'))}}
 
 								</div>
 

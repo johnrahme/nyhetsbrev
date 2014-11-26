@@ -151,6 +151,21 @@ class EmailController extends \BaseController {
             ->with('rightColumns', $rightColumns)
             ->with('mainHeader', $mainHeader);
     }
+    public function emailSend($id){
+        $leftColumns = emailData::where('emailId','=', $id)->where('position','=','left')->get();
+        $bigColumns = emailData::where('emailId','=', $id)->where('position','=','top')->get();
+        $rightColumns = emailData::where('emailId','=', $id)->where('position','=','right')->get();
+        $mainHeader = email::find($id)->name;
+
+        $data = array('leftColumns' => $leftColumns, 'bigColumns' => $bigColumns, 'rightColumns' => $rightColumns, 'mainHeader' => $mainHeader);
+        Mail::send('emails.layouts.antworkDynT', $data, function ($message) use ($mainHeader){
+            $message->from('nyhetsbrev@futf.se', 'FUTF');
+            $message->bcc(array('john.rahme.se@gmail.com'))->subject($mainHeader);
+
+        });
+
+        return Redirect::to('emails')->with('message', 'Email skickat!');
+    }
     public  function editColumn($id){
         $column = emailData::find($id);
         return View::make('emails.newsletter.editColumn')

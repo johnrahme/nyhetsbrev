@@ -7,20 +7,21 @@ class UserController extends BaseController
 
     public function index()
     {
-        return View::make('user.index')
-            ->with('title', 'Admin');
+        return View::make('users.index')
+            ->with('title', 'User');
     }
     public function newUser()
     {
-        return View::make('user.new')
-            ->with('title', 'New User');
+        return View::make('users.new')
+            ->with('title', 'New Admin');
     }
-    public function createAdmin()
+    public function createUser()
     {
         $user = new user;
         $user->username = Input::get('username');
         $user->email = Input::get('email');
         $user->password = Hash::make(Input::get('password'));
+        $user->level = Input::get('level');
         $user->save();
 
         return Redirect::to('user')

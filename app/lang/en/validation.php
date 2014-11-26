@@ -84,13 +84,13 @@ return array(
 	|
 	*/
 
-	'custom' => array(
+/*	'custom' => array(
 		'email' => array(
 			'required' => 'Du måste fylla i mail',
 			'email' => 'Det måste vara en email'
 			 
 		),
-	),
+	),*/
 
 	/*
 	|--------------------------------------------------------------------------

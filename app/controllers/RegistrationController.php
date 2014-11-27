@@ -18,32 +18,32 @@ class RegistrationController extends BaseController
         if($validation->fails()){
             return Redirect::to('/')->withErrors($validation)->withInput();
         }
-        $utbTest = utbildningsutskottet::where('Email', '=', Input::get('email'))->get();
+        $utbTest = Utbildningsutskottet::where('Email', '=', Input::get('email'))->get();
         if(Input::has('option1')&&$utbTest->isEmpty()){
-            $utbild = new utbildningsutskottet;
+            $utbild = new Utbildningsutskottet;
             $utbild->name = Input::get('name');
             $utbild->email = Input::get('email');
             $utbild->save();
         }
-        $klTest = klubbverket::where('Email', '=', Input::get('email'))->get();
+        $klTest = Klubbverket::where('Email', '=', Input::get('email'))->get();
         if(Input::has('option2')&&$klTest->isEmpty()){
-            $klubb = new klubbverket;
+            $klubb = new Klubbverket;
             $klubb->name = Input::get('name');
             $klubb->email = Input::get('email');
             $klubb->save();
 
         }
-        $idrTest = idrottsutskottet::where('Email', '=', Input::get('email'))->get();
+        $idrTest = Idrottsutskottet::where('Email', '=', Input::get('email'))->get();
         if(Input::has('option3')&&$idrTest->isEmpty()){
-            $idrott = new idrottsutskottet;
+            $idrott = new Idrottsutskottet;
             $idrott->name = Input::get('name');
             $idrott->email = Input::get('email');
             $idrott->save();
 
         }
-        $arbTest = arbetsmarknadsutskottet::where('Email', '=', Input::get('email'))->get();
+        $arbTest = Arbetsmarknadsutskottet::where('Email', '=', Input::get('email'))->get();
         if(Input::has('option4')&&$arbTest->isEmpty()){
-            $arbet = new arbetsmarknadsutskottet;
+            $arbet = new Arbetsmarknadsutskottet;
             $arbet->name = Input::get('name');
             $arbet->email = Input::get('email');
             $arbet->save();

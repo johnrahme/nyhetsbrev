@@ -97,16 +97,16 @@ class DownloadController extends BaseController
         }
         else {
                 if($utskott == 'utbildningsutskottet'){
-                    $table = utbildningsutskottet::all();
+                    $table = Utbildningsutskottet::all();
                 }
                 elseif($utskott == 'klubbverket'){
-                    $table = klubbverket::all();
+                    $table = Klubbverket::all();
                 }
                 elseif($utskott == 'arbetsmarknadsutskottet'){
-                    $table = arbetsmarknadsutskottet::all();
+                    $table = Arbetsmarknadsutskottet::all();
                 }
                 elseif($utskott == 'idrottsutskottet'){
-                    $table = idrottsutskottet::all();
+                    $table = Idrottsutskottet::all();
                 }
                 $output = "id, name, email, Created , Last editet \n";
                 foreach ($table as $row) {

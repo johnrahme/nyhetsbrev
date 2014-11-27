@@ -27,7 +27,6 @@
 								<label for = "contact-name" class = "col-lg-2" control-label>Namn</label>
 								<div class = "col-lg-10">
 									{{Form::text('name','',array('class'=>'form-control', 'placeholder' =>'Namn'))}}
-
 								</div>
 
 							</div>

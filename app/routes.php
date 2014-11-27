@@ -14,7 +14,6 @@
 Route::get('/', array('as'=>'start', 'uses'=>'HomeController@index'));
 
 
-
 //Mail
 Route::get('mail', array('as'=>'mail','uses' => 'MailController@index'))->before('auth');
 

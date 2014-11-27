@@ -14,7 +14,7 @@ class EmailData extends Eloquent implements UserInterface, RemindableInterface {
      *
      * @var string
      */
-    protected $table = 'emailData';
+    protected $table = 'emaildata';
 
     /**
      * The attributes excluded from the model's JSON form.

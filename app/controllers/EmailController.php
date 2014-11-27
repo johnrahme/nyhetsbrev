@@ -9,7 +9,7 @@ class EmailController extends \BaseController {
 	 */
 	public function index()
 	{
-        $emails = email::orderBy('name')->get();
+        $emails = Email::orderBy('name')->get();
         return View::make('emails.newsletter.index')
             ->with('title', 'Nyhetsbrev')
             ->with('active', 'mail')
@@ -37,7 +37,7 @@ class EmailController extends \BaseController {
 	 */
 	public function store()
 	{
-        $validation = email::validate(Input::all());
+        $validation = Email::validate(Input::all());
 
         if($validation->fails()){
             return Redirect::route('emails.create')->withErrors($validation)->withInput();
@@ -62,7 +62,7 @@ class EmailController extends \BaseController {
         return View::make('emails.newsletter.show')
             ->with('title', 'Visa Nyhetsbrev')
             ->with('active', 'mail')
-            ->with('email',email::find($id));
+            ->with('email',Email::find($id));
 	}
 
 
@@ -74,11 +74,11 @@ class EmailController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-        $columns = emailData::where('emailId', '=',$id)->get();
+        $columns = EmailData::where('emailId', '=',$id)->get();
         return View::make('emails.newsletter.edit')
             ->with('title', 'Edit email')
             ->with('active', 'mail')
-            ->with('email',email::find($id))
+            ->with('email',Email::find($id))
             ->with('columns', $columns);
 	}
 
@@ -93,13 +93,13 @@ class EmailController extends \BaseController {
 	{
         $id = Input::get('id');
 
-        $validation = email::validate(Input::all());
+        $validation = Email::validate(Input::all());
 
         if($validation->fails()){
             return Redirect::route('emails.edit', $id)->withErrors($validation);
         }
 
-        $email = email::find($id);
+        $email = Email::find($id);
         $email->name = Input::get('name');
         $email->save();
 
@@ -111,14 +111,14 @@ class EmailController extends \BaseController {
     public function addColumn(){
 
 
-        $validation = emailData::validate(Input::all());
+        $validation = EmailData::validate(Input::all());
         $id = Input::get('id');
 
         if($validation->fails()){
             return Redirect::route('emails.edit', $id)->withErrors($validation);
         }
 
-        $emailData = new emailData;
+        $emailData = new EmailData;
         $emailData->emailId = Input::get('id');
         $emailData->header = Input::get('columnH');
         $emailData->content = Input::get('column');
@@ -128,7 +128,7 @@ class EmailController extends \BaseController {
             if (Input::file('image')->isValid()) {
                 $imgName = Input::file('image')->getClientOriginalName();
                 $imgExtension = Input::file('image')->getClientOriginalExtension();
-                $saveName =microtime().'_'.$imgName;
+                $saveName =str_replace(' ', '', microtime()).'_'.$imgName;
                 Input::file('image')->move('img/emails', $saveName);
                 $URL = 'img/emails/'.$saveName;
                 $emailData->pictureUrl = $URL;
@@ -144,10 +144,10 @@ class EmailController extends \BaseController {
     }
 
     public function emailPreview($id){
-        $leftColumns = emailData::where('emailId','=', $id)->where('position','=','left')->get();
-        $bigColumns = emailData::where('emailId','=', $id)->where('position','=','top')->get();
-        $rightColumns = emailData::where('emailId','=', $id)->where('position','=','right')->get();
-        $mainHeader = email::find($id)->name;
+        $leftColumns = EmailData::where('emailId','=', $id)->where('position','=','left')->get();
+        $bigColumns = EmailData::where('emailId','=', $id)->where('position','=','top')->get();
+        $rightColumns = EmailData::where('emailId','=', $id)->where('position','=','right')->get();
+        $mainHeader = Email::find($id)->name;
 
 
         return View::make('emails.layouts.antworkDynT')
@@ -157,10 +157,10 @@ class EmailController extends \BaseController {
             ->with('mainHeader', $mainHeader);
     }
     public function emailSend($id){
-        $leftColumns = emailData::where('emailId','=', $id)->where('position','=','left')->get();
-        $bigColumns = emailData::where('emailId','=', $id)->where('position','=','top')->get();
-        $rightColumns = emailData::where('emailId','=', $id)->where('position','=','right')->get();
-        $mainHeader = email::find($id)->name;
+        $leftColumns = EmailData::where('emailId','=', $id)->where('position','=','left')->get();
+        $bigColumns = EmailData::where('emailId','=', $id)->where('position','=','top')->get();
+        $rightColumns = EmailData::where('emailId','=', $id)->where('position','=','right')->get();
+        $mainHeader = Email::find($id)->name;
 
         $data = array('leftColumns' => $leftColumns, 'bigColumns' => $bigColumns, 'rightColumns' => $rightColumns, 'mainHeader' => $mainHeader);
         Mail::send('emails.layouts.antworkDynT', $data, function ($message) use ($mainHeader){
@@ -172,7 +172,7 @@ class EmailController extends \BaseController {
         return Redirect::to('emails')->with('message', 'Email skickat!');
     }
     public  function editColumn($id){
-        $column = emailData::find($id);
+        $column = EmailData::find($id);
         return View::make('emails.newsletter.editColumn')
             ->with('title', 'Edit Column')
             ->with('active', 'mail')
@@ -182,12 +182,12 @@ class EmailController extends \BaseController {
 
     public  function updateColumn (){
         $id = Input::get('id');
-        $validation = emailData::validate(Input::all());
+        $validation = EmailData::validate(Input::all());
 
         if($validation->fails()){
             return Redirect::route('emails.column.edit', $id)->withErrors($validation);
         }
-        $emailData  = emailData::find($id);
+        $emailData  = EmailData::find($id);
         $emailData->header = Input::get('columnH');
         $emailData->content = Input::get('column');
         $emailData->position = Input::get('position');
@@ -201,7 +201,7 @@ class EmailController extends \BaseController {
                 }
                 $imgName = Input::file('image')->getClientOriginalName();
                 $imgExtension = Input::file('image')->getClientOriginalExtension();
-                $saveName =microtime().'_'.$imgName;
+                $saveName =str_replace(' ', '', microtime()).'_'.$imgName;
                 Input::file('image')->move('img/emails', $saveName);
                 $URL = 'img/emails/'.$saveName;
                 $emailData->pictureUrl = $URL;
@@ -223,7 +223,7 @@ class EmailController extends \BaseController {
     }
     public function destroyColumn()
     {
-        $column = emailData::find(Input::get('id'));
+        $column = EmailData::find(Input::get('id'));
         $header = $column->header;
         $emailId = $column->emailId;
         if($column->pictureUrl != "") {
@@ -237,9 +237,9 @@ class EmailController extends \BaseController {
 	public function destroy($id)
 	{
         $id = Input::get('id');
-        $email = email::find($id);
+        $email = Email::find($id);
         $name = $email->name;
-        $emailDatas = emailData::where('emailId','=',$id)->get();
+        $emailDatas = EmailData::where('emailId','=',$id)->get();
         foreach($emailDatas as $emailData){
             $emailData->delete();
         }

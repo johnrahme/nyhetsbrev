@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'nyhetsbrev',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'mysql246.loopia.se',
+			'database'  => 'uecc_se',
+			'username'  => 'uecc@u34551',
+			'password'  => 'qH9s!%hea',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

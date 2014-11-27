@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/hemsida/laravel/public',
+	'url' => 'http://www.nyhetsbrev.futf.se/public_html',
 
 	/*
 	|--------------------------------------------------------------------------

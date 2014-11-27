@@ -17,6 +17,11 @@ class UserController extends BaseController
     }
     public function createUser()
     {
+        $validation = user::validate(Input::all());
+
+        if($validation->fails()){
+            return Redirect::route('new_user')->withErrors($validation)->withInput();
+        }
         $user = new user;
         $user->username = Input::get('username');
         $user->email = Input::get('email');

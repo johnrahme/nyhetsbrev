@@ -12,7 +12,7 @@ class Users extends Migration {
      */
     public function up()
     {
-        Schema::create('users', function($table){
+        Schema::create('newsletter_users', function($table){
             $table->increments('id');
             $table->string('username');
             $table->string('email')->unique();
@@ -30,7 +30,7 @@ class Users extends Migration {
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('newsletter_users');
     }
 
 }

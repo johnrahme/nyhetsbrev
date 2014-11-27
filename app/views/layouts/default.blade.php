@@ -31,16 +31,16 @@
         <div class = "navbar-collapse collapse navHeaderCollapse" >
             <ul class = "nav navbar-nav navbar-right">
                 @if(Auth::check())
-                <li class = "active"> {{link_to('/','Start')}}</li>
-                <li> {{link_to_route('emails.index','Mail')}}</li>
-                <li>{{link_to_route('download','Nedladdning')}}</li>
-                @if(Auth::user()->level == 2)
-                <li>{{link_to_route('user','Användare')}}</li>
-                @endif
-                <li>{{link_to_route('logout','Logga ut')}}</li>
+                    <li id = "start"> {{link_to('/','Start')}}</li>
+                    <li id = "mail"> {{link_to_route('emails.index','Mail')}}</li>
+                    <li id = "download">{{link_to_route('download','Nedladdning')}}</li>
+                    @if(Auth::user()->level == 2)
+                    <li id = "users">{{link_to_route('user','Användare')}}</li>
+                    @endif
+                    <li>{{link_to_route('logout','Logga ut')}}</li>
                 @else
-                <li class = "active"> {{link_to('/','Start')}}</li>
-                <li>{{link_to_route('login','Logga In')}}</li>
+                    <li id = "start"> {{link_to('/','Start')}}</li>
+                    <li id = "login">{{link_to_route('login','Logga In')}}</li>
                 @endif
             </ul>
         </div>
@@ -68,6 +68,15 @@
 {{HTML::script('js/checkmodal.js')}}
 {{HTML::script('js/bootstrap-wysihtml5.min.js')}}
 {{HTML::script('js/wysihtml5-0.3.0.js')}}
+
+{{--Sätter rätt tryckt länk--}}
+<script>
+$(document).ready(function(){
+    var active = '#{{$active}}';
+    $(active).addClass("active");
+});
+</script>
+
 
 
     <!-- Script -->

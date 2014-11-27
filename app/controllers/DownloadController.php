@@ -10,7 +10,8 @@ class DownloadController extends BaseController
         $results = DB::table('utbildningsutskottet')->get();
         return View::make('nedladdning.index')
             ->with('results', $results)
-            ->with('title', 'Nedladdning');
+            ->with('title', 'Nedladdning')
+            ->with('active', 'download');
     }
     public function get(){
         //Sätt up variabler

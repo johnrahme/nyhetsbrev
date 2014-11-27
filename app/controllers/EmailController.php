@@ -12,6 +12,7 @@ class EmailController extends \BaseController {
         $emails = email::orderBy('name')->get();
         return View::make('emails.newsletter.index')
             ->with('title', 'Nyhetsbrev')
+            ->with('active', 'mail')
             ->with('emails', $emails);
 	}
 
@@ -24,7 +25,8 @@ class EmailController extends \BaseController {
 	public function create()
 	{
         return View::make('emails.newsletter.create')
-            ->with('title', 'Skapa Nyhetsbrev');
+            ->with('title', 'Skapa Nyhetsbrev')
+            ->with('active', 'mail');
 	}
 
 
@@ -58,7 +60,9 @@ class EmailController extends \BaseController {
 	public function show($id)
 	{
         return View::make('emails.newsletter.show')
-            ->with('title', 'Visa Nyhetsbrev')->with('email',email::find($id));
+            ->with('title', 'Visa Nyhetsbrev')
+            ->with('active', 'mail')
+            ->with('email',email::find($id));
 	}
 
 
@@ -73,6 +77,7 @@ class EmailController extends \BaseController {
         $columns = emailData::where('emailId', '=',$id)->get();
         return View::make('emails.newsletter.edit')
             ->with('title', 'Edit email')
+            ->with('active', 'mail')
             ->with('email',email::find($id))
             ->with('columns', $columns);
 	}
@@ -170,6 +175,7 @@ class EmailController extends \BaseController {
         $column = emailData::find($id);
         return View::make('emails.newsletter.editColumn')
             ->with('title', 'Edit Column')
+            ->with('active', 'mail')
             ->with('column', $column);
 
     }

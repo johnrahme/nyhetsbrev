@@ -8,11 +8,13 @@ class UserController extends BaseController
     public function index()
     {
         return View::make('users.index')
+            ->with('active', 'users')
             ->with('title', 'User');
     }
     public function newUser()
     {
         return View::make('users.new')
+            ->with('active', 'users')
             ->with('title', 'New Admin');
     }
     public function createUser()

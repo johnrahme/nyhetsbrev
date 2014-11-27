@@ -18,7 +18,8 @@ class HomeController extends BaseController {
 	public function index()
 	{
         return View::make('start.index')
-            ->with('title', 'FUTF-nyhetsbrev');
+            ->with('title', 'FUTF-nyhetsbrev')
+            ->with('active', 'start');
 	}
 
 }

@@ -52,7 +52,10 @@
 @include('contact.index')
 
     @if(Session::has('message'))
-    <p style = "color: #008000;"> {{Session::get('message')}} </p>
+    <div class = "alert alert-success alert-dismissable">{{Session::get('message')}}
+        <button type = "button" class = "close" data-dismiss = "alert">&times;</button>
+    </div>
+
 
     @endif
 

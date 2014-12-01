@@ -246,7 +246,7 @@ class EmailController extends \BaseController {
         $email->delete();
 
         return Redirect::route('emails.index')
-            ->with('message', htmlentities($name).'User was deleted successfully');
+            ->with('message', htmlentities($name).' email was deleted successfully');
 	}
 
 

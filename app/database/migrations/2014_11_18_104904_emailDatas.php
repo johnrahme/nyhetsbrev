@@ -18,7 +18,7 @@ class EmailDatas extends Migration {
             $table->foreign('emailId')->references('id')->on('emails');
             $table->string('header');
             $table->string('position');
-            $table->text('content');
+            $table->longText('content');
             $table->string('pictureUrl');
             $table->timestamps();
         });

@@ -14,8 +14,8 @@ class AddUsers extends Migration {
 	{
         DB::table('newsletter_users')->insert(array(
             'username' => 'John Rahme',
-            'email' => 'john.rahme.se@gmail.com',
-            'password' => Hash::make('123'),
+            'email' => 'admin@admin.se',
+            'password' => Hash::make('password'),
             'level' => 2,
             'created_at' => date('Y-m-d H:m:s'),
             'updated_at' => date('Y-m-d H:m:s')

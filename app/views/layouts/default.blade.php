@@ -15,12 +15,13 @@
 
 </head>
 
-<body>
+<body style = "background-image: url('{{URL::asset('img/yellow2.jpg');}}');background-repeat: no-repeat;background-attachment: fixed;">
+
 <!-- Navbar -->
 <div class = "navbar navbar-inverse navbar-static-top">
     <div class = "container">
         <div class = "navbar-header">
-            <a href = "#" class = "navbar-brand"> FUTF:s nyhetsbrev</a>
+            <a href = "#" class = "navbar-brand"> FUTF nyhetsbrev{{--{{ HTML::image('img/topbanner.gif','banner', array('class'=>'img-responsive', 'style'=>'height: 100%')) }}--}}</a>
             <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
                 <span class = "icon-bar"> </span>
                 <span class = "icon-bar"> </span>
@@ -48,7 +49,7 @@
 </div>
 
 <!-- Container -->
-<div class="container">
+<div class="container" style = "box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
 @include('contact.index')
 
     @if(Session::has('message'))

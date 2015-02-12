@@ -1,14 +1,11 @@
 @extends('layouts.default')
 
 @section('content')
-
-<div class ="container">
 			<div class = "jumbotron text-center">
 			<h1> Roligt att du vill engagera dig! </h1>
 			<p> Anmäl dig nedan för att få information och nyhetsbrev från de olika utskotten hos FUTF </p>
 
 		</div>
-		<div class = "container">
 			<div class = "row">
 
 			<!--Registrera!!-->
@@ -84,8 +81,5 @@
 				</div>
 
 				<!--Maila!!-->
-
-			</div>
-		</div>
 
 @stop

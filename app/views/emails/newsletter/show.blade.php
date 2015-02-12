@@ -1,18 +1,31 @@
 @extends('layouts.default')
 
 @section('content')
+@include('emails.newsletter.del')
 
-	<h1> {{{$email->name}}} </h1>
+    <div class = "row">
+        <div class = "col-md-12">
+            <div class = "page-header" style = "margin-top:0">
+                <h1> {{{$email->name}}} </h1>
+            </div>
 
-    <span>
-    {{link_to_route('emails.index', 'Emails')}}|
-    {{ link_to_route('emails.edit', 'Edit', array($email->id)) }}|
+            {{ Form::hidden('id', $email->id)}}
+            <span>
+            {{link_to_route('emails.index', 'Emails','' ,array('class'=>'btn btn-primary'))}}
+            {{ link_to_route('emails.edit', 'Ändra', array($email->id), array('class'=>'btn btn-primary')) }}
+            <a href = "#del" data-toggle = "modal" class = "btn btn-danger">Radera</a>
 
-    {{ Form::open(array('route'=>'emails.destroy', 'method' =>'DELETE')) }}
-    {{ Form::hidden('id', $email->id)}}
-    {{ Form::submit('Delete') }}
-    {{ Form::close() }}
 
-    </span>
+            </span>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-12"style="margin-top: 10px">
+               @include('emails.layouts.antworkDynT')
+
+        </div>
+
+    </div>
+
 	
 @stop

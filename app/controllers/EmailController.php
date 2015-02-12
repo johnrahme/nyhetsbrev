@@ -59,10 +59,19 @@ class EmailController extends \BaseController {
 	 */
 	public function show($id)
 	{
+        $leftColumns = EmailData::where('emailId','=', $id)->where('position','=','left')->get();
+        $bigColumns = EmailData::where('emailId','=', $id)->where('position','=','top')->get();
+        $rightColumns = EmailData::where('emailId','=', $id)->where('position','=','right')->get();
+        $mainHeader = Email::find($id)->name;
+
         return View::make('emails.newsletter.show')
             ->with('title', 'Visa Nyhetsbrev')
             ->with('active', 'mail')
-            ->with('email',Email::find($id));
+            ->with('email',Email::find($id))
+            ->with('leftColumns', $leftColumns)
+            ->with('bigColumns', $bigColumns)
+            ->with('rightColumns', $rightColumns)
+            ->with('mainHeader', $mainHeader);
 	}
 
 

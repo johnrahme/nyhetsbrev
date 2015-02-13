@@ -31,11 +31,6 @@
             	{{link_to_route('emails.preview', 'Preview', array($email->id))}}
 
             	</p>
-            	@if(Auth::user()->level==2)
-                <p class = 'text-center'>
-                {{link_to_route('emails.send', 'Send', array($email->id))}}
-                </p>
-                @endif
 
 
 

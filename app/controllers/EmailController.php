@@ -170,15 +170,41 @@ class EmailController extends \BaseController {
         $bigColumns = EmailData::where('emailId','=', $id)->where('position','=','top')->get();
         $rightColumns = EmailData::where('emailId','=', $id)->where('position','=','right')->get();
         $mainHeader = Email::find($id)->name;
-
+        $receivers = array();
+        $doneAdding = false;
+        if(Input::has('all')){
+            array_push($receivers,'arskurs1@futf.se', 'arskurs2@futf.se','arskurs3@futf.se','arskurs4@futf.se','arskurs5@futf.se');
+            $doneAdding = true;
+        }
+        if(Input::has('year1')&&!$doneAdding){
+            array_push($receivers, 'arskurs1@futf.se');
+        }
+        if(Input::has('year2')&&!$doneAdding){
+            array_push($receivers, 'arskurs2@futf.se');
+        }
+        if(Input::has('year3')&&!$doneAdding){
+            array_push($receivers, 'arskurs2@futf.se');
+        }
+        if(Input::has('year4')&&!$doneAdding){
+            array_push($receivers, 'arskurs4@futf.se');
+        }
+        if(Input::has('year5')&&!$doneAdding){
+            array_push($receivers, 'arskurs5@futf.se');
+        }
+        if(Input::has('bord')){
+            array_push($receivers, 'styrelse@futf.se');
+        }
+        if(Input::has('it')){
+            array_push($receivers, 'it@futf.se');
+        }
         $data = array('leftColumns' => $leftColumns, 'bigColumns' => $bigColumns, 'rightColumns' => $rightColumns, 'mainHeader' => $mainHeader);
-        Mail::send('emails.layouts.antworkDynT', $data, function ($message) use ($mainHeader){
+        Mail::send('emails.layouts.antworkDynT', $data, function ($message) use ($mainHeader, $receivers){
             $message->from('nyhetsbrev@futf.se', 'FUTF');
-            $message->bcc(array('john.rahme.se@gmail.com'))->subject($mainHeader);
+            $message->bcc($receivers)->subject($mainHeader);
 
         });
 
-        return Redirect::to('emails')->with('message', 'Email skickat!');
+        return Redirect::to('emails')->with('message', 'Email skickat till '.implode(',',$receivers));
     }
     public  function editColumn($id){
         $column = EmailData::find($id);

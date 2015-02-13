@@ -59,6 +59,13 @@
 
 
     @endif
+    @if(Session::has('errorMessage'))
+    <div class = "alert alert-danger alert-dismissable">{{Session::get('errorMessage')}}
+        <button type = "button" class = "close" data-dismiss = "alert">&times;</button>
+    </div>
+
+
+    @endif
 
     <!-- Content -->
     @yield('content')

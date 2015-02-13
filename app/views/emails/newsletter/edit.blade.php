@@ -43,17 +43,17 @@
             <div class = "col-md-6">
 
                 <p>
-                {{Form::label('columnH', 'Column header')}}<br/>
+                {{Form::label('columnH', 'Column header')}} <a href="#" id = "header" class = 'popups' tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Header" data-content="Överskriften på din column"><span class="glyphicon glyphicon-question-sign" style="font-size: 1.0em"></span></a><br/>
                 {{Form::text('columnH')}}
                 </p>
                  <p>
-                 {{Form::label('position', 'Position')}} <br/>
+                 {{Form::label('position', 'Position')}} <a href="#" id = "position" class = 'popups' tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Position" data-content="Bestämmer vart i nyhetsbrevet din column ska hamna"><span class="glyphicon glyphicon-question-sign" style="font-size: 1.0em"></span></a> <br/>
                  {{Form::radio('position', 'top')}} Top<br>
                  {{Form::radio('position', 'left', true)}} Left<br>
                  {{Form::radio('position', 'right')}} Right
                  </p>
                 <p>
-                {{Form::label('column', 'Column text')}} <br/>
+                {{Form::label('column', 'Column text')}} <a href="#" id = "text" class = 'popups' tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Text" data-content="Texten i din column"><span class="glyphicon glyphicon-question-sign" style="font-size: 1.0em"></span></a><br/><br/>
                  <div class = "summernote" id="col">Skriv din text här!</div>
                  {{Form::hidden('column')}}
                </p>
@@ -128,6 +128,9 @@
         $("#form1").submit();
     });
 
+   </script>
+   <script>
+   $('.popups').popover().on('click', function(e) {e.preventDefault();});
    </script>
 
  @stop

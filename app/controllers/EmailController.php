@@ -197,6 +197,9 @@ class EmailController extends \BaseController {
         if(Input::has('it')){
             array_push($receivers, 'it@futf.se');
         }
+        if(empty($receivers)){
+            return Redirect::route('emails.show',$id)->with('errorMessage', 'Inga mottagare valda');
+        }
         $data = array('leftColumns' => $leftColumns, 'bigColumns' => $bigColumns, 'rightColumns' => $rightColumns, 'mainHeader' => $mainHeader);
         Mail::send('emails.layouts.antworkDynT', $data, function ($message) use ($mainHeader, $receivers){
             $message->from('nyhetsbrev@futf.se', 'FUTF');
@@ -204,7 +207,7 @@ class EmailController extends \BaseController {
 
         });
 
-        return Redirect::to('emails')->with('message', 'Email skickat till '.implode(',',$receivers));
+        return Redirect::route('emails.show',$id)->with('message', 'Email skickat till '.implode(',',$receivers));
     }
     public  function editColumn($id){
         $column = EmailData::find($id);

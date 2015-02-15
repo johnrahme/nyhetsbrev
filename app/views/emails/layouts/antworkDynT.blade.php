@@ -260,7 +260,7 @@ img {
                 <tr>
                     <td valign="top"  style="padding-left:12px;padding-right:12px; padding-bottom: 12px">
                     <div class="subtitle" style="font-family:Tahoma, Arial, sans-serif;font-size:16px;font-weight:600;color:#FFB300;margin-top:0px">Kontakt</div>
-                    <div class="col-copy" style="font-family:Tahoma, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Har du frågor eller idéer så tveka inte att skicka ett <a href = "http://www.futf.se/kontakt">mail</a> till någon i styrelsen.<br> Är du intresserad av att få information från de olika utskotten så registrera din mailadress <a href = "http://www.futf.se/nyhetsbrev">här</a>. <br>När händer saker? Prenumerera på <a href = "http://www.futf.se/student/kalender">futf-kalendern!</a></div>
+                    <div class="col-copy" style="font-family:Tahoma, Arial, sans-serif;font-size:13px;line-height:20px;text-align:left;color:#333333;margin-top:12px">Har du frågor eller idéer så tveka inte att skicka ett <a href = "http://www.futf.se/kontakt">mail</a> till någon i styrelsen.<br> Är du intresserad av att få information från de olika utskotten så registrera din mailadress <a href = "http://www.nyhetsbrev.futf.se">här</a>. <br>När händer saker? Prenumerera på <a href = "http://www.futf.se/student/kalender">futf-kalendern!</a></div>
                     </td>
                 </tr>
                   <br>
@@ -280,7 +280,7 @@ img {
         <tr>
           <td class="container-padding footer-text" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-left:24px;padding-right:24px">
             <br><br>
-            Du får detta mailsom inskriven student på Civilingenjörsprogrammet i Teknisk Fysik. Om du vill sluta få mail ifrån Föreningen Uppsala Tekniska Fysiker kan du höra av dig till <a href="mailto:it@futf.se" style="color:#aaaaaa">it@futf.se</a>
+            Du får detta mail som inskriven student på Civilingenjörsprogrammet i Teknisk Fysik. Om du vill sluta få mail ifrån Föreningen Uppsala Tekniska Fysiker kan du höra av dig till <a href="mailto:it@futf.se" style="color:#aaaaaa">it@futf.se</a>
             <br><br>
 
             <strong>Föreningen Uppsala Tekniska Fysiker</strong><br>

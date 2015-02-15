@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-	<h1 class = 'text-center'> Edit Column {{ $column->label}}</h1>
+	<h1 class = 'text-center'> Ändra kolumn {{ $column->label}}</h1>
 
     @include('common.users_errors')
 
@@ -16,7 +16,7 @@
             <div class = "col-md-12">
                 {{Form::open(array('route'=> 'emails.column.update','method' => 'put','id'=>'form1', 'files'=>true))}}
                 <p>
-                {{Form::label('columnH', 'Column header')}}<br/>
+                {{Form::label('columnH', 'Rubrik')}}<br/>
                 {{Form::text('columnH', $column->header)}}
                 </p>
                  <p>
@@ -27,7 +27,7 @@
                  {{Form::radio('position', 'right')}} Right
                  </p>
                 <p>
-                {{Form::label('column', 'Column text')}} <br/>
+                {{Form::label('column', 'Text')}} <br/>
                  <div class = "summernote" id="col">{{$column->content}}</div>
                  {{Form::hidden('column')}}
                </p>
@@ -39,7 +39,7 @@
                 </div>
                </p>
                <p>
-               <p> <button id="save" class="btn btn-primary" onclick="save()" type="button">Save Column</button> </p>
+               <p> <button id="save" class="btn btn-primary" onclick="save()" type="button">Spara kolumn</button> </p>
                </p>
             </div>
             {{Form::hidden('id',$column->id)}}

@@ -21,7 +21,8 @@
 <div class = "navbar navbar-inverse navbar-static-top">
     <div class = "container">
         <div class = "navbar-header">
-            <a href = "#" class = "navbar-brand"> FUTF nyhetsbrev{{--{{ HTML::image('img/topbanner.gif','banner', array('class'=>'img-responsive', 'style'=>'height: 100%')) }}--}}</a>
+            <a href = "#" class = "navbar-brand">{{ HTML::image('img/tuppStor.png','banner', array('class'=>'img-responsive', 'style'=>'height: 140%')) }}</a>
+            <a href = "#" class = "navbar-brand">FUTF</a>
             <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
                 <span class = "icon-bar"> </span>
                 <span class = "icon-bar"> </span>

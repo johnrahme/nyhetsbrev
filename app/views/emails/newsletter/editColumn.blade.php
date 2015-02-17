@@ -58,10 +58,9 @@
  <script>
  $(document).ready(function() {
    $('.summernote').summernote({
-   width: 450,
-   height: 400,
-   minHeight: 400,
-   maxHeight: 400
+   height: 300,
+   minHeight: 300,
+   maxHeight: 300
    });
  });
  </script>

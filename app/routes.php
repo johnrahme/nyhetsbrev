@@ -70,7 +70,8 @@ Route::get('user/new', array('as' => 'new_user', 'uses' => 'UserController@newUs
 Route::post('user/create', array('uses' => 'UserController@createUser'))->before('auth');
 
 
-
+//Fast Mail
+Route::resource('fastMail', 'FastMailController', ['only'=>['index', 'store']]);
 
 
 

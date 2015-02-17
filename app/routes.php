@@ -45,7 +45,7 @@ Route::group(array('before' => 'auth'), function() {
 
 //Registration
 
-Route::put('signup', array('as'=>'signup', 'uses' =>'RegistrationController@register'))->before('auth');
+Route::put('signup', array('as'=>'signup', 'uses' =>'RegistrationController@register'));
 
 //Nedladdning
 

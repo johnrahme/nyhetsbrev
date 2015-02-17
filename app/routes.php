@@ -71,7 +71,7 @@ Route::post('user/create', array('uses' => 'UserController@createUser'))->before
 
 
 //Fast Mail
-Route::resource('fastMail', 'FastMailController', ['only'=>['index', 'store']]);
-
-
+Route::group(array('before' => 'auth'), function() {
+    Route::resource('fastMail', 'FastMailController', ['only' => ['index', 'store']]);
+});
 

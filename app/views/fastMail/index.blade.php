@@ -10,40 +10,62 @@
 <div class = "row">
     <div class = "col-md-12">
         {{Form::open(array('route'=> 'fastMail.store','files'=>true, 'id'=>'form1'))}}
-        <div class = "form-group">
-            {{Form::label('name', 'Rubrik')}}
-            {{Form::text('name', '', array('class'=>'form-control'))}}
+        <div class = "row">
+            <div class = "col-sm-3">
+                    <div class = "form-group">
+                        {{Form::label('name', 'Rubrik')}}
+                        {{Form::text('name', '', array('class'=>'form-control'))}}
+                    </div>
+            </div>
         </div>
+
         {{Form::label('summernote', 'Text')}}
         <div class = "summernote" id="col">text</div>
-        {{Form::label('receiver', 'Vilka ska få mailet?')}}
         {{Form::hidden('text', '', array('id'=>'text'))}}
 
-        <div class = "form-group">
-								<div class="checkbox">
-								  <label>
-									{{Form::checkbox('option1','option1')}}
-									Utbildningsutstkottet
-								  </label>
-								</div>
-								<div class="checkbox">
-								  <label>
-									{{Form::checkbox('option2','option2')}}
-									Klubbverket
-								  </label>
-								</div>
-								<div class="checkbox">
-								  <label>
-									{{Form::checkbox('option3','option3')}}
-									Idrottsutskottet
-								  </label>
-								</div>
-								<div class="checkbox">
-								  <label>
-									{{Form::checkbox('option4','option4')}}
-									Arbetsmarknadsutskottet
-								  </label>
-								</div>
+
+				<div class = "row">
+				    {{--<div class = "col-md-4">--}}
+
+				        {{--<div class = "form-group">--}}
+				        {{--{{Form::label('receiver', 'Vilka ska få mailet?')}}--}}
+                    								{{--<div class="checkbox">--}}
+                    								  {{--<label>--}}
+                    									{{--{{Form::checkbox('option1','option1')}}--}}
+                    									{{--Utbildningsutstkottet--}}
+                    								  {{--</label>--}}
+                    								{{--</div>--}}
+                    								{{--<div class="checkbox">--}}
+                    								  {{--<label>--}}
+                    									{{--{{Form::checkbox('option2','option2')}}--}}
+                    									{{--Klubbverket--}}
+                    								  {{--</label>--}}
+                    								{{--</div>--}}
+                    								{{--<div class="checkbox">--}}
+                    								  {{--<label>--}}
+                    									{{--{{Form::checkbox('option3','option3')}}--}}
+                    									{{--Idrottsutskottet--}}
+                    								  {{--</label>--}}
+                    								{{--</div>--}}
+                    								{{--<div class="checkbox">--}}
+                    								  {{--<label>--}}
+                    									{{--{{Form::checkbox('option4','option4')}}--}}
+                    									{{--Arbetsmarknadsutskottet--}}
+                    								  {{--</label>--}}
+                    								{{--</div>--}}
+                    	{{--</div>--}}
+				    {{--</div>--}}
+				    <div class ="col-md-4">
+				        <div class = "form-group">
+				         {{Form::label('from', 'Vem ska det skickas till?')}}<br>
+
+                         {{Form::radio('receiver', 'utb', true)}} Utbildningsutskottet<br>
+                         {{Form::radio('receiver', 'klubb')}} Klubbverket<br>
+                         {{Form::radio('receiver', 'idrott')}} Idrottsutskottet<br>
+                         {{Form::radio('receiver', 'arb')}} Arbetsmarknadsutskottet<br>
+
+				        </div>
+				    </div>
 				</div>
 		{{Form::button('Skicka!', array('id'=>'save', 'class'=>'btn btn-success'))}}
         {{Form::close()}}
@@ -59,9 +81,9 @@
  <script>
  $(document).ready(function() {
    $('.summernote').summernote({
-   height: 300,
-   minHeight: 300,
-   maxHeight: 300
+   height: 200,
+   minHeight: 200,
+   maxHeight: 200
    });
  });
  </script>

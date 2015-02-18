@@ -10,6 +10,9 @@ class FastMailController extends \BaseController {
 	}
 	public function store()
 	{
-
+        $name = Input::get('name');
+        $text = Input::get('text');
+        return Redirect::route('fastMail.index')
+            ->with('message', htmlentities($text));
 	}
 }

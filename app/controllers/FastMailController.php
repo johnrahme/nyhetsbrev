@@ -16,7 +16,7 @@ class FastMailController extends \BaseController {
 
         $receivers = array();
         if($rec == 'utb'){
-            $from = 'alumnsida@futf.se';
+            $from = 'utbildning@futf.se';
             $sendName = 'Utbildningsutskottet-FUTF';
             foreach(utbildningsutskottet::all() as $person){
                 $adress = $person->Email;
@@ -24,7 +24,7 @@ class FastMailController extends \BaseController {
             }
         }
         if($rec == 'idrott'){
-            $from = 'john_rahme92@hotmail.com';
+            $from = 'idrott@futf.se';
             $sendName = 'Idrottsutskottet-FUTF';
             foreach(idrottsutskottet::all() as $person){
                 $adress = $person->Email;
@@ -32,7 +32,7 @@ class FastMailController extends \BaseController {
             }
         }
         if($rec == 'klubb'){
-            $from = 'john_rahme92@hotmail.com';
+            $from = 'klubbmastare@futf.se';
             $sendName = 'Klubbverket-FUTF';
             foreach(klubbverket::all() as $person){
                 $adress = $person->Email;
@@ -40,7 +40,7 @@ class FastMailController extends \BaseController {
             }
         }
         if($rec == 'arb'){
-            $from = 'john_rahme92@hotmail.com';
+            $from = 'arbetsmarknad@futf.se';
             $sendName = 'Arbetsmarknadsutskottet-FUTF';
             foreach(arbetsmarknadsutskottet::all() as $person){
                 $adress = $person->Email;

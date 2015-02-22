@@ -16,7 +16,7 @@ class FastMailController extends \BaseController {
 
         $receivers = array();
         if($rec == 'utb'){
-            $from = 'john_rahme92@hotmail.com';
+            $from = 'alumnsida@futf.se';
             $sendName = 'Utbildningsutskottet-FUTF';
             foreach(utbildningsutskottet::all() as $person){
                 $adress = $person->Email;
